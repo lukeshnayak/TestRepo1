@@ -21,7 +21,7 @@ WebDriver driver ;
 		driver.close();
 	}
 	
-	@Test
+	@Test(invocationCount = 200)
 	public void urlLoad1() {
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.findElement(By.name("username")).sendKeys("Admin");
